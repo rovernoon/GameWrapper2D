@@ -1,0 +1,68 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Asset/Font/regular.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scene/Menu.gd" type="Script" id=2]
+[ext_resource path="res://Asset/Font/large.tres" type="DynamicFont" id=3]
+
+[node name="Menu" type="VBoxContainer"]
+margin_right = 1024.0
+margin_bottom = 600.0
+alignment = 1
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Header" type="HBoxContainer" parent="."]
+margin_right = 1024.0
+margin_bottom = 286.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Title" type="Label" parent="Header"]
+margin_left = 470.0
+margin_top = 133.0
+margin_right = 553.0
+margin_bottom = 152.0
+custom_fonts/font = ExtResource( 3 )
+text = "Game Title"
+
+[node name="Body" type="VBoxContainer" parent="."]
+margin_top = 290.0
+margin_right = 1024.0
+margin_bottom = 577.0
+size_flags_vertical = 3
+
+[node name="StartGame" type="Button" parent="Body"]
+margin_right = 1024.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 1 )
+text = "Start game"
+flat = true
+
+[node name="Settings" type="OptionButton" parent="Body"]
+margin_top = 29.0
+margin_right = 1024.0
+margin_bottom = 54.0
+custom_fonts/font = ExtResource( 1 )
+shortcut_in_tooltip = false
+text = "Settings"
+flat = true
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Footer" type="VBoxContainer" parent="."]
+margin_top = 581.0
+margin_right = 1024.0
+margin_bottom = 600.0
+alignment = 1
+
+[node name="Label" type="Label" parent="Footer"]
+margin_right = 1024.0
+margin_bottom = 19.0
+custom_fonts/font = ExtResource( 1 )
+text = "Footer text"
+align = 1
