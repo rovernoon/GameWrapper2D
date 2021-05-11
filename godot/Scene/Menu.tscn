@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Asset/Font/regular.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Scene/Menu.gd" type="Script" id=2]
-[ext_resource path="res://Asset/Font/large.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Asset/Font/title.tres" type="DynamicFont" id=3]
 
 [node name="Menu" type="VBoxContainer"]
 margin_right = 1024.0
@@ -21,10 +21,10 @@ size_flags_vertical = 3
 alignment = 1
 
 [node name="Title" type="Label" parent="Header"]
-margin_left = 470.0
-margin_top = 133.0
-margin_right = 553.0
-margin_bottom = 152.0
+margin_left = 389.0
+margin_top = 115.0
+margin_right = 634.0
+margin_bottom = 171.0
 custom_fonts/font = ExtResource( 3 )
 text = "Game Title"
 
@@ -41,19 +41,6 @@ custom_fonts/font = ExtResource( 1 )
 text = "Start game"
 flat = true
 
-[node name="Settings" type="OptionButton" parent="Body"]
-margin_top = 29.0
-margin_right = 1024.0
-margin_bottom = 54.0
-custom_fonts/font = ExtResource( 1 )
-shortcut_in_tooltip = false
-text = "Settings"
-flat = true
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Footer" type="VBoxContainer" parent="."]
 margin_top = 581.0
 margin_right = 1024.0
@@ -66,3 +53,5 @@ margin_bottom = 19.0
 custom_fonts/font = ExtResource( 1 )
 text = "Footer text"
 align = 1
+
+[connection signal="pressed" from="Body/StartGame" to="." method="_on_StartGame_pressed"]

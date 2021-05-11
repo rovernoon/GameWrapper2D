@@ -10,6 +10,11 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Node2D",
+"class": "BaseView",
+"language": "GDScript",
+"path": "res://View/BaseView.gd"
+}, {
+"base": "Node2D",
 "class": "Game",
 "language": "GDScript",
 "path": "res://Scene/Game.gd"
@@ -20,6 +25,7 @@ _global_script_classes=[ {
 "path": "res://Scene/Menu.gd"
 } ]
 _global_script_class_icons={
+"BaseView": "",
 "Game": "",
 "Menu": ""
 }
@@ -32,9 +38,17 @@ boot_splash/image="res://Asset/UI/splash_image.png"
 boot_splash/use_filter=false
 config/icon="res://Asset/UI/icon.png"
 
+[autoload]
+
+RNG="*res://System/RNG.gd"
+Data="*res://System/Data.gd"
+Entity="*res://System/Entity.gd"
+Sound="*res://System/Sound.gd"
+View="*res://System/View.gd"
+
 [display]
 
-window/size/resizable=false
+window/stretch/mode="2d"
 
 [physics]
 

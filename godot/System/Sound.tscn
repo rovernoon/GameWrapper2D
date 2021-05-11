@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Asset/Sound/beep.wav" type="AudioStream" id=1]
+
+[node name="Sound" type="Node2D"]
+
+[node name="Beep" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = -2.5
