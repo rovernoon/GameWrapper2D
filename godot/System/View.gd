@@ -46,7 +46,6 @@ func _process(delta):
 		if t <= 0:
 			t = 0
 			if fade_out:
-				fade_target.on_close()
 				fade_target.visible = false
 				fade_target.ready = false
 				stack.pop_back()
@@ -55,8 +54,11 @@ func _process(delta):
 					stack[len(stack)-1].modulate = Color.white
 				else:
 					has_focus = false
+				fade_target.on_close()
+				fade_target.emit_signal("close")
 			else:
 				fade_target.on_open()
+				fade_target.emit_signal("open")
 		if fade_out:
 			fade_target.modulate.a = sqrt(t/t_max)
 		else:

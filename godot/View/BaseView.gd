@@ -1,6 +1,9 @@
 class_name BaseView
 extends Node2D
 
+signal close
+signal open
+
 var ready = false
 
 func on_opening(_args):

@@ -15,10 +15,10 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Center"]
-margin_left = 343.0
-margin_top = 178.0
-margin_right = 681.0
-margin_bottom = 421.0
+margin_left = 331.0
+margin_top = 157.0
+margin_right = 693.0
+margin_bottom = 442.0
 custom_fonts/font = ExtResource( 2 )
 text = "GameWrapper2D
 
